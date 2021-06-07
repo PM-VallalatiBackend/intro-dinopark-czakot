@@ -2,17 +2,23 @@ package dinopark.repository;
 
 import dinopark.domain.Dinosaur;
 import dinopark.dto.EatingHabit;
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-@Repository
-public abstract class DinosaurRepositoryImpl implements DinosaurRepositoryCombined {
+public class DinosaurRepositoryImpl implements DinosaurRepositoryCustomFunctionNames {
 
+    @Autowired
+    private DinosaurRepository dinosaurRepository;
+
+    @Override
     public List<Dinosaur> getAll() {
-        return findAll();
+        return dinosaurRepository.findAll();
     }
+
+    @Override
     public List<Dinosaur> getByEatingHabit(EatingHabit eatingHabit) {
-        return findByEatingHabit(eatingHabit);
+        return dinosaurRepository.findByEatingHabit(eatingHabit);
     }
+
 }

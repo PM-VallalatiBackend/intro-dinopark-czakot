@@ -4,6 +4,8 @@ import dinopark.domain.Dinosaur;
 import dinopark.dto.DinosaurCreateCommand;
 import dinopark.dto.DinosaurDisplay;
 import dinopark.repository.DinosaurRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +15,7 @@ public class DinosaurService {
 
     private final DinosaurRepository dinosaurRepository;
 
+    @Autowired
     DinosaurService(DinosaurRepository dinosaurRepository) {
         this.dinosaurRepository = dinosaurRepository;
     }
