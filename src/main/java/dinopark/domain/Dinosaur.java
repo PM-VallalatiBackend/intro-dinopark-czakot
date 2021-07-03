@@ -1,13 +1,12 @@
 package dinopark.domain;
 
-import dinopark.dto.Species;
 import dinopark.dto.EatingHabit;
 import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter
+@NoArgsConstructor
 public class Dinosaur {
 
     @Id

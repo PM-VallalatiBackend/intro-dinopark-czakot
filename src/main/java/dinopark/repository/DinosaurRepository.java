@@ -8,7 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DinosaurRepository extends CrudRepository<Dinosaur, Integer>, DinosaurRepositoryCustomFunctionNames {
+public interface DinosaurRepository extends CrudRepository<Dinosaur, Integer> {
     List<Dinosaur> findAll();
-    List<Dinosaur> findByEatingHabit(EatingHabit eatingHabit);
+    List<Dinosaur> findByEatingHabit(Enum<EatingHabit> eatingHabit);
+    long countByEatingHabit(Enum<EatingHabit> eatingHabit);
 }

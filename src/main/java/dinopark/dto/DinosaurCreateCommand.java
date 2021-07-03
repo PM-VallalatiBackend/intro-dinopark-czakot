@@ -1,9 +1,11 @@
 package dinopark.dto;
 
-import lombok.Builder;
-import lombok.Getter;
+import dinopark.domain.Species;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter @Builder
+@Data
+@NoArgsConstructor
 public class DinosaurCreateCommand {
 
     private String name;

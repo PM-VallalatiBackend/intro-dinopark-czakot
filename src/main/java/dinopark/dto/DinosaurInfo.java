@@ -1,10 +1,11 @@
 package dinopark.dto;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter @Builder
-public class DinosaurDisplay {
+@Data
+@NoArgsConstructor
+public class DinosaurInfo {
 
     private Integer id;
     private String name;
